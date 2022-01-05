@@ -6,7 +6,7 @@ import numpy as np
 import os
 
 html_string = '''<h3>Code to detect Faces from photos</h3><br>
-                <p style="background-color:black;color:white;height:700px;width:600px;border: 1px solid black">
+                <p style="background-color:black;color:white;height:600px;width:600px;border: 1px solid black">
                 import cv2
                 #Load the cascade<br>
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')<br>
