@@ -22,7 +22,7 @@ for (x, y, w, h) in faces:<br>
 #Display the output<br>
 cv2.imshow('img', img)<br>
 cv2.waitKey()</p><br>
-<h4>Example output:</h4> &nbsp; test.jpg<br>
+<h4>Example output: &nbsp; <b>test.jpg<b></h4><br>
 '''
 st.markdown(html_string, unsafe_allow_html=True)
 image = Image.open('outputeg.jpeg')
