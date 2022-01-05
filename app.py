@@ -8,8 +8,7 @@ import os
 html_string = '''<h3>Code to detect Faces from photos</h3><br>
                 <p style="background-color:black;color:white;height:300px;width:300px;border: 1px solid black">
                 import cv2
-
-#Load the cascade<br>
+                #Load the cascade<br>
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')<br>
 #Read the input image<br>
 img = cv2.imread('test.jpg')<br>
