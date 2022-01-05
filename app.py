@@ -24,7 +24,7 @@ cv2.imshow('img', img)<br>
 cv2.waitKey()</p><br>
 <h4>Example output:</h4> &nbsp; test.jpg<br>
 '''
-image = Image.open('outputeg.jpeg')
+image = Image.open('outputeg.jpg')
 st.image(image)
 st.markdown(html_string, unsafe_allow_html=True)
 
