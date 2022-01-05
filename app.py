@@ -11,7 +11,7 @@ html_string = '''<h3>Code to detect Faces from photos</h3><br>
                 #Load the cascade<br>
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')<br>
 #Read the input image<br>
-img = cv2.imread('test.jpg')<br>
+img = cv2.imread('test.png')<br>
 #Convert into grayscale<br>
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
 #Detect faces<br>
@@ -21,7 +21,8 @@ for (x, y, w, h) in faces:<br>
     cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)<br>
 #Display the output<br>
 cv2.imshow('img', img)<br>
-cv2.waitKey()</p><br>'''
+cv2.waitKey()</p><br>
+<h4>Example output: test.jpg</h4>'''
 
 st.markdown(html_string, unsafe_allow_html=True)
 # Loading pre-trained parameters for the cascade classifier
@@ -36,27 +37,10 @@ def detect(image):
     '''
     Function to detect faces/eyes and smiles in the image passed to this function
     '''
-
     
     image = np.array(image.convert('RGB'))
-    
-    # Next two lines are for converting the image from 3 channel image (RGB) into 1 channel image
-    # img = cv2.cvtColor(new_img, 1)
-    # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    
-    # Passing grayscale image to perform detection
-    # We pass grayscaled image because opencv expects image with one channel
-    # Even if you don't convert the image into one channel, open-cv does it automatically.
-    # So, you can just comment line number 26 and 27.
-    # If you do, make sure that you change the variables name at appropriate places in the code below
-    # Don't blame me if you run into errors while doing that :P
-    
     faces = face_cascade.detectMultiScale(image=image, scaleFactor=1.3, minNeighbors=5)
-    # The face_cascade classifier returns coordinates of the area in which the face might be located in the image
-    # These coordinates are (x,y,w,h)
-    # We will be looking for eyes and smile within this area instead of looking for them in the entire image
-    # This makes sense when you're looking for smiles and eyes in a face, if that is not your use case then
-    # you can pull the code segment out and make a different function for doing just that, specifically.
+
 
 
     # Draw rectangle around faces
@@ -94,7 +78,7 @@ def about():
 
 
 def main():
-    st.title("Face Detection Code Test ")
+    st.title("Test the code ")
         
         # You can specify more file types below if you want
     image_file = st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
