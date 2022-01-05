@@ -23,9 +23,9 @@ for (x, y, w, h) in faces:<br>
 cv2.imshow('img', img)<br>
 cv2.waitKey()</p><br>
 <h4>Example output:</h4> &nbsp; test.jpg<br>
-<img src="outputeg.jpeg"/>
 '''
-
+image = Image.open('outputeg.jpeg')
+st.image(image)
 st.markdown(html_string, unsafe_allow_html=True)
 
 # Loading pre-trained parameters for the cascade classifier
