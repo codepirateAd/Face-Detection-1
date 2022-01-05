@@ -24,10 +24,9 @@ cv2.imshow('img', img)<br>
 cv2.waitKey()</p><br>
 <h4>Example output:</h4> &nbsp; test.jpg<br>
 '''
+st.markdown(html_string, unsafe_allow_html=True)
 image = Image.open('outputeg.jpeg')
 st.image(image)
-st.markdown(html_string, unsafe_allow_html=True)
-
 # Loading pre-trained parameters for the cascade classifier
 try:
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
