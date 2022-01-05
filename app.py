@@ -78,8 +78,6 @@ def about():
 def main():
     st.title("Face Detection App Test ")
 
-    choice = st.sidebar.selectbox("Pick something fun", activities)
-
 
     st.write("Go to the About section from the sidebar to learn more about it.")
         
