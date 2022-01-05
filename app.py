@@ -23,7 +23,7 @@ for (x, y, w, h) in faces:<br>
 cv2.imshow('img', img)<br>
 cv2.waitKey()</p><br>
 <h4>Example output:</h4> &nbsp; test.jpg<br>
-<img style="width:600; height: 350;" src="outputeg.jpeg"/>
+<img src="outputeg.jpeg"/>
 '''
 
 st.markdown(html_string, unsafe_allow_html=True)
