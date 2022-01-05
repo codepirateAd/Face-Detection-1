@@ -5,7 +5,9 @@ from PIL import Image
 import numpy as np
 import os
 
+html_string = "<h3>this is an html string</h3>"
 
+st.markdown(html_string, unsafe_allow_html=True)
 # Loading pre-trained parameters for the cascade classifier
 try:
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -76,10 +78,7 @@ def about():
 
 
 def main():
-    st.title("Face Detection App Test ")
-
-
-    st.write("Go to the About section from the sidebar to learn more about it.")
+    st.title("Face Detection Code Test ")
         
         # You can specify more file types below if you want
     image_file = st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
