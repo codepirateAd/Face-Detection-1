@@ -22,9 +22,12 @@ for (x, y, w, h) in faces:<br>
 #Display the output<br>
 cv2.imshow('img', img)<br>
 cv2.waitKey()</p><br>
-<h4>Example output: test.jpg</h4>'''
+<h4>Example output:</h4> &nbsp; test.jpg
+<img style="width:600; height: 350;"src="outputeg.jpeg">
+'''
 
 st.markdown(html_string, unsafe_allow_html=True)
+
 # Loading pre-trained parameters for the cascade classifier
 try:
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
