@@ -6,21 +6,21 @@ import numpy as np
 import os
 
 html_string = '''<h3>Code to detect Faces from photos</h3><br>
-                <p style="background-color:black;color:white;>
+                <p style="background-color:black;color:white;height:300px;width:300px;border: 1px solid black">
                 import cv2
 
 #Load the cascade<br>
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')<br>
-# Read the input image<br>
+#Read the input image<br>
 img = cv2.imread('test.jpg')<br>
-# Convert into grayscale<br>
+#Convert into grayscale<br>
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
-# Detect faces<br>
+#Detect faces<br>
 faces = face_cascade.detectMultiScale(gray, 1.1, 4)<br>
-# Draw rectangle around the faces
+#Draw rectangle around the faces
 for (x, y, w, h) in faces:<br>
     cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)<br>
-# Display the output<br>
+#Display the output<br>
 cv2.imshow('img', img)<br>
 cv2.waitKey()</p><br>'''
 
